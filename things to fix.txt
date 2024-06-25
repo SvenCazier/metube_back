@@ -1,0 +1,62 @@
+NOT WORKING
+GET /video/Nzg0ZDMzZjAtNWQ1Yy00NTUwLTkzMWItMGFkNTlhOGMxZGMz
+{
+  'Content-Range': 'bytes 113246208-114294783/113857564', #RANGE LARGER??
+  'Accept-Ranges': 'bytes',
+  'Content-Length': 1048576,
+  'Content-Type': 'video/mp4'
+}
+
+DIFFERENT NOT WORKING
+GET /video/ZjU4ZjQ4MmYtYTViMC00Mzg0LTk4ODEtODMwN2Y2MTk2ZTli
+{
+  'Content-Range': 'bytes 143654912-144703487/143746040', #RANGE LARGER??
+  'Accept-Ranges': 'bytes',
+  'Content-Length': 1048576,
+  'Content-Type': 'video/mp4'
+}
+
+ALWAYS SAME HEADER
+
+WORKING
+GET /video/ZTljN2YxMTgtMTkxYy00MWVmLTlmNTUtYzkxYTViYzM0YzM4
+{
+  'Content-Range': 'bytes 5242880-6291455/362262119',
+  'Accept-Ranges': 'bytes',
+  'Content-Length': 1048576,
+  'Content-Type': 'video/mp4'
+}
+GET /video/ZTljN2YxMTgtMTkxYy00MWVmLTlmNTUtYzkxYTViYzM0YzM4
+{
+  'Content-Range': 'bytes 6291456-7340031/362262119',
+  'Accept-Ranges': 'bytes',
+  'Content-Length': 1048576,
+  'Content-Type': 'video/mp4'
+}
+
+
+
+
+
+
+
+
+
+watch:1 Access to XMLHttpRequest at 'https://api.metube.icu/video' from origin 'http://localhost:4200' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+api.service.ts:24 
+ PATCH https://api.metube.icu/video net::ERR_FAILED 504
+api.service.ts:24 ERROR 
+HttpErrorResponse {headers: HttpHeaders, status: 0, statusText: 'Unknown Error', url: 'https://api.metube.icu/video', ok: false, …}
+error: ProgressEvent {isTrusted: true, lengthComputable: false, loaded: 0, total: 0, type: 'error', …}
+headers: HttpHeaders {normalizedNames: Map(0), lazyUpdate: null, headers: Map(0)}
+message: "Http failure response for https://api.metube.icu/video: 0 Unknown Error"
+name: "HttpErrorResponse"
+ok: false
+status: 0
+statusText: "Unknown Error"
+url: "https://api.metube.icu/video"
+[[Prototype]]: HttpResponseBase
+
+WHICH IS GOOD
+
+BUT REQUEST STILL GETS THROUGH TO SERVER, HOW TO STOP IT AT NGINX

@@ -1,0 +1,31 @@
+{
+	"name": "metube",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"start": "nodemon src/app.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Sven Cazier",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^1.6.7",
+		"bcrypt": "^5.1.0",
+		"body-parser": "^1.20.2",
+		"cors": "^2.8.5",
+		"crypto": "^1.0.1",
+		"detect-file-encoding-and-language": "^2.4.0",
+		"dotenv": "^16.1.4",
+		"express": "^4.18.2",
+		"express-subdomain": "^1.0.5",
+		"express-useragent": "^1.0.15",
+		"express-validator": "^7.0.1",
+		"jose": "^4.14.4",
+		"multer": "^1.4.5-lts.1",
+		"rethinkdb": "^2.4.2",
+		"thinky": "^2.3.9",
+		"urlsafe-base64": "^1.0.0",
+		"uuid": "^9.0.0"
+	}
+}
